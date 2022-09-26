@@ -1,0 +1,79 @@
+#include <iostream>
+#include <bitset>
+
+int num;
+int a;
+int b;
+
+void task_1()
+{
+    std::cout << "Baratelia Timur Adgurovich, 221-352" << '\n';
+}
+
+void task_2()
+{
+    std::cout << "min int = " << int(0b10000000000000000000000000000000) << " , ";
+    std::cout << "max int = " << int(0b01111111111111111111111111111111) << " , ";
+    std::cout << "size of int = " << sizeof(int) << '\n';
+    std::cout << "min unsigned int = " << unsigned(int(0b00000000000000000000000000000000)) << " , ";
+    std::cout << "max unsigned int = " << unsigned(int(0b11111111111111111111111111111111)) << " , ";
+    std::cout << "size of unsigned int = " << sizeof(unsigned int) << '\n';
+    std::cout << "min short = " << short(0b1000000000000000) << " , ";
+    std::cout << "max short = " << short(0b0111111111111111) << " , ";
+    std::cout << "size of short = " << sizeof(short) << '\n';
+    std::cout << "min unsigned short = " << unsigned(short(0b0000000000000000)) << " , ";
+    std::cout << "max unsigned short = " << unsigned(short(0b1111111111111111)) << " , ";
+    std::cout << "size of unsigned short = " << sizeof(unsigned short) << '\n';
+    std::cout << "min long = " << long(0b10000000000000000000000000000000) << " , ";
+    std::cout << "max long = " << long(0b01111111111111111111111111111111) << " , ";
+    std::cout << "size of long = " << sizeof(long) << '\n';
+    std::cout << "min double = " << DBL_MIN << " , ";
+    std::cout << "max double = " << DBL_MAX << " , ";
+    std::cout << "size of double = " << sizeof(double) << '\n';
+    std::cout << "min char = " << char(0b00000000) << " , "; //0b - в доичной системе
+    std::cout << "max char = " << char(0b11111111) << " , ";
+    std::cout << "size of char = " << sizeof(char) << '\n';
+    std::cout << "min bool = " << bool(0b00000000) << " , ";
+    std::cout << "max bool = " << bool(0b11111111) << " , ";
+    std::cout << "size of bool = " << sizeof(bool) << '\n';
+}
+
+void task_3()
+{
+    std::cout << "number: ";
+    std::cin >> num;
+    std::cout << "binar: " << std::bitset<sizeof(int) * 8>(num) << std::endl;
+    std::cout << "16: " << std::hex << num << std::dec << std::endl;
+    std::cout << "unsigned int: " << unsigned(int(num)) << '\n';
+    std::cout << "short: " << short(num) << '\n';
+    std::cout << "unsigned short: " << unsigned(short(num)) << '\n';
+    std::cout << "long: " << long(num) << '\n';
+    std::cout << "double: " << double(num) << '\n';
+    std::cout << "char: " << char(num) << '\n';
+    std::cout << "bool: " << bool(num) << '\n';
+}
+
+void task_4()
+{
+    std::cout << "a*x=b \nInput a, b: ";
+    std::cin >> a >> b;
+    std::cout << a << "*x=" << b << std::endl;
+    std::cout << "x=" << b << "/" << a << std::endl;
+    std::cout << "x=" << double(b) / a << std::endl;
+}
+
+void task_5()
+{
+    std::cout << "enter the points of the segment: ";
+    std::cin >> a >> b;
+    std::cout << "midpoint: " << (a + b) / 2. << std::endl;
+}
+
+int main()
+{
+    task_1();
+    task_2();
+    task_3();
+    task_4();
+    task_5();
+}
